@@ -1,0 +1,53 @@
+1.Table Name =" client_master_68"
+
+create table client_master_68
+(client_no varchar2(6)primary key,
+name varchar2(20),
+address1 varchar2(30),
+address2 varchar2(30),
+city varchar2(15),
+state varchar2(15),
+pincode number(6),
+bal_due number(10,2)
+);
+
+insert into client_master_68 values('0001', 'Ivan','','', 'Bombay', 'Maharashtra',400054, 15000);
+insert into client_master_68 values('0002', 'Vandana','','', 'Madras' ,'Tamilnadu',780001, 0);
+insert into client_master_68 values('0003', 'Pramada','','', 'Bombay', 'Maharashtra',400057, 5000);
+insert into client_master_68 values('0004', 'Basu','','', 'Bombay' ,'Maharashtra',400056, 0);
+insert into client_master_68 values('0005', 'Ravi','','', 'Delhi' ,'',100001, 2000);
+insert into client_master_68 values('0006', 'Rukmini','','', 'Bombay', 'Maharashtra', 400050,
+0);
+
+select *from client_master_68 
+
+2.Table Name ="product_master"
+
+create table product_master
+(
+product_no varchar2(6) primary key,
+description varchar2(20),
+profit_percent number(5,2),
+unit_measure varchar2(8),
+qty_on_hand number(6),
+reoder_lvl number(6),
+sell_price number(10),
+cost_price number(10)
+);
+
+insert into product_master values ('P00001', '1.44floppies', 5, 'piece', 100, 20, 525,
+500);
+insert into product_master values('P03453', 'Monitors',6, 'piece', 10, 3, 12000, 11200);
+insert into product_master values('P06734', 'Mouse',5, 'piece', 20, 5, 1050,
+500);
+insert into product_master values('P07865', '1.22 floppies', 5, 'piece', 100, 20, 525,
+500);
+insert into product_master values('P07868', 'Keyboards',2, 'piece', 10, 3, 3150, 3050);
+insert into product_master values('P07885', 'CD Drive',2.5, 'piece',10, 3, 5250, 5100);
+insert into product_master values('P07965', '540 HDD',4, 'piece', 10, 3, 8400, 8000);
+insert into product_master values('P07975', '1.44 Drive',5, 'piece', 10, 3, 1050, 1000);
+insert into product_master values('P08865', '1.22 Drive',5, 'piece', 2, 3, 1050, 1000);
+
+select *from product_master
+
+
