@@ -103,4 +103,60 @@ VALUES ('S00004', 'Ashish', 'A/5', 'Juhu', 'Mumbai', 400044, 'Maharashtra', 3000
 
 SELECT * FROM SALESMAN_MASTER_23;
 
-4.Table Name=" Data for Sales_Order_23"
+4.Table Name=" Data for Sales_Order_25"
+
+Create Table sales_order_25
+ (orderno varchar(6) primary key,
+ clientno varchar(6) references client_master_23,
+ orderdate date not null,
+ delyaddr varchar(20),
+ salesmanno varchar(6) references salesman_master_23,
+ delytype char(1),
+ billyn char(1),
+ delydate date,
+ orderstatus varchar(10),
+ constraint chk_orderno check (orderno like 'O%'),
+ constraint chk_delytype check (delytype in('p','f')),
+ constraint chk_delydate check (delydate>orderdate),
+ constraint chk_orderstatus check (orderstatus in('in process','fulfilled','backorder','cancelled')));
+
+insert into sales_order_25 VALUES('O19001','C00001','12-June-04','','S00001','f','N','20-July-04','in process');
+
+Insert Into sales_order_25 VALUES ('O19002','C00002','25-June-04','','S00002','p','N','27-June-04','cancelled');
+
+Insert Into sales_order_25 VALUES ('O46865','C00003','18-Feb-04','','S00003','f','Y','20-Feb-04','fulfilled');
+
+Insert Into sales_order_25 VALUES ('O19003','C00004','03-Apr-04','','S00001','f','Y','07-Apr-04','fulfilled');
+
+Insert Into sales_order_25 VALUES ('O46866','C00005','20-May-04','','S00002','p','N','22-May-04','cancelled');
+
+Insert Into sales_order_25 VALUES ('O19008','C00006','24-May-04','','S00004','f','N','26-July-04','fulfilled');
+
+select *from sales_order_25
+
+5.Table Name="sales_order_details_23"
+
+Create Table sales_order_details_23
+ ( orderno varchar(6) references sales_order_25,
+ productno varchar(6) references product_master_23,
+ qtyordered number(8),
+ qtydisp number(8),
+ productrate number(10,2));
+
+Insert Into sales_order_details_23 VALUES ('O19001','P00001','4','4','525');
+Insert Into sales_order_details_23 VALUES ('O19001','P07965','2','1','8400');
+Insert Into sales_order_details_23 VALUES ('O19001','P07885','2','1','5250');
+Insert Into sales_order_details_23 VALUES ('O19002' ,'P00001','10' ,'0' ,'525');
+Insert Into sales_order_details_23 VALUES ('O46865' ,'P07868' ,'3' ,'3' ,'3150');
+Insert Into sales_order_details_23 VALUES ('O46865' ,'P07885' ,'3' ,'1' ,'5250');
+Insert Into sales_order_details_23 VALUES ('O46865', 'P00001' ,'10' ,'10' ,'525');
+Insert Into sales_order_details_23 VALUES ('O46865' ,'P0345', '4' ,'4', '1050');
+Insert Into sales_order_details_23 VALUES ('O46865' ,'P0345', '4' ,'4', '1050');
+Insert Into sales_order_details_23 VALUES ('O19003','P0345','2','2','1050');
+Insert Into sales_order_details_23 VALUES ('O19003','P06734','1','1','12000');
+Insert Into sales_order_details_23 VALUES ('O46866','P07965','1','0','8400');
+Insert Into sales_order_details_23 VALUES ('O46866','P07975','1','0','1050');
+Insert Into sales_order_details_23 VALUES ('O19008','P00001','10','5','525');
+Insert Into sales_order_details_23 VALUES ('O19008','P07975',5,3,1050);
+
+Select *from sales_order_details_23
