@@ -1,0 +1,9 @@
+system user:
+GRANT SELECT, INSERT, UPDATE, DELETE ON
+system.stud TO Pooja
+
+REVOKE select,insert on system.stud from Pooja
+
+
+Pooja user:
+ select *from system.stud

@@ -1,0 +1,10 @@
+create view v2 as select * from client_master with check option;
+select *from v2
+
+
+create synonym syn_123 for stud;
+select *from syn_123 
+
+
+create database link myremotedb using 'system'
+select sysdate from dual myremotedb
