@@ -53,4 +53,38 @@ End;
 
 The number is positive
 
-Statement processed.
+[3] Program:
+
+Declare 
+      D_Color Number:=5;
+      D_Name Varchar2(330);
+
+Begin
+     If D_Color<=1 Then
+        D_Name:='Red';
+   
+    ElsIf D_Color<=2 Then
+           D_Name:='Blue';
+
+    ElsIf D_Color<=3 Then
+           D_Name:='Green';
+
+    ElsIf D_Color<=4 Then
+           D_Name:='Brown';
+
+    ElsIf D_Color<=5 Then
+           D_Name:='Black';
+
+    ElsIf D_Color<=6 Then
+          D_Name:='Sky Blue';
+
+    Else D_Name:='No Colors';
+
+    End If;
+         Dbms_Output.Put_Line('The Color Name Is:'||D_Name);
+   
+End;
+
+
+
+  
