@@ -1,0 +1,48 @@
+Program No:1 Constant Simpel
+
+Declare
+     collge_name constant varchar(20):='Sy Bca';
+
+Begin
+    
+   dbms_output.put_line('I Study In'||collge_name);
+
+End;
+
+[OUTPUT]
+
+I Study InSy Bca
+
+Program No:2
+
+ ConstantDeclare
+
+      --constant declartion
+      pi constant number:=3.141592654;
+     --other declartion
+      radius number(5,2);
+      dia number(5,2);
+      circumferece number(7,2);
+      area number(10,2); 
+
+Begin
+    --processing
+    radius:=9.5;
+    dia:=radius*2;
+    circumferece:=2.0*pi*radius;
+    area:=pi*radius*radius;
+    --output
+    
+   dbms_output.put_line('Radius:'||radius);
+   dbms_output.put_line('Diameter:'||dia);
+   dbms_output.put_line('Circumferece:'||circumferece);
+   dbms_output.put_line('Area:'||area);
+
+End;
+
+[OUTPUT]
+
+Radius:9.5
+Diameter:19
+Circumferece:59.69
+Area:283.53

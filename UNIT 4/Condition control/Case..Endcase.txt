@@ -1,0 +1,30 @@
+Case..Endcase
+Declare
+  grade char(1):='B';
+
+Begin 
+ 
+ Case grade
+ 
+ when'A' then Dbms_Output.Put_line('Excellent');
+
+ when'B' then Dbms_Output.Put_line('Very Good');
+
+ when'C' then Dbms_Output.Put_line('Well Done');
+
+ when'D' then Dbms_Output.Put_line('You Passed');
+
+ when'F' then Dbms_Output.Put_line('Better Try Again');
+
+Else
+  Dbms_Output.Put_line('No Searche Grade');
+
+End Case;
+
+End;
+
+[OUTPUT]
+
+Very Good
+
+Statement processed.

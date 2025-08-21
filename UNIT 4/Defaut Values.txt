@@ -1,0 +1,13 @@
+--Default 
+
+Declare
+   cat varchar2(30)Default'I love cat😍';
+
+Begin
+     Dbms_output.put_line(cat);
+
+End;
+
+[OUTPUT]
+
+I love cat😍

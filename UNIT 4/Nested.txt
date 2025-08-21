@@ -1,0 +1,29 @@
+-- Nested variables
+
+Declare 
+   --Global variables
+    num1 number:=68;
+    num2 number:=72;
+
+Begin
+    Dbms_output.put_line('Outer variables num1:'||num1);
+    Dbms_output.put_line('Outer variables num2:'||num2);
+ 
+Declare 
+      --Local variables
+      num1 number :=120;
+      num2 number :=130;
+Begin
+        Dbms_output.put_line('Inner variables num1:'||num1);
+        Dbms_output.put_line('Inner variables num2:'||num2); 
+ 
+   End;
+
+End;
+
+[OUTPUT]
+       
+ Outer variables num1:68
+ Outer variables num2:72
+ Inner variables num1:120
+ Inner variables num2:130

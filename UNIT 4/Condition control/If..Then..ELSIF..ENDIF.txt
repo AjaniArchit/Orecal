@@ -1,0 +1,56 @@
+[3]If..Then..Elsif..Endif
+[1]Program:
+Declare
+ v_score number:=95;
+ v_grade char(1);
+
+Begin
+ 
+ If v_score>=90 Then
+    v_grade:='A';
+Elsif v_score>=80 Then
+      v_grade:='B';
+Elsif v_score>=70 Then
+      v_grade:='C';
+Elsif v_score>=60 Then
+      v_grade:='D';
+Else
+     v_grade:='F';
+End If;
+
+ Dbms_Output.Put_Line('The Grade Is:'||v_grade);
+
+End;
+
+[OUTPUT]
+
+The Grade Is:A
+
+Statement processed.
+
+[2]Program: 
+Declare
+ 
+ v_number number:=10;
+
+Begin
+  
+ If v_number>0Then
+ Dbms_Output.Put_Line('The number is positive');
+
+Elsif v_number<0Then
+
+ Dbms_output.put_line('The number is negative');
+
+Else
+ Dbms_Output.Put_Line('The number is Zero');
+
+End If;
+
+End;
+
+[OUTPUT]
+
+The number is positive
+
+Statement processed.

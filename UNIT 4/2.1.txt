@@ -1,0 +1,21 @@
+[1]IF..Then..Endif
+
+ Declare
+  a number(3):=10;
+
+Begin
+ 
+  --a=10;
+ If(a<20)Then
+
+
+ dbms_output.put_line('a is less then 20');
+
+End If;
+   dbms_output.put_line('Value of a is:'||a);
+End;
+
+[Output]
+
+a is less then 20
+Value of a is:10

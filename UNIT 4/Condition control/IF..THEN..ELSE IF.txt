@@ -1,0 +1,20 @@
+[2]IF..THEN..ELSE..END IF
+
+Declare
+  A number(3):=100;
+
+Begin
+ 
+ If(A<20)Then
+ Dbms_Output.Put_Line('A is less than 20');
+Else
+ Dbms_Output.Put_Line('A is Not less than 20');
+
+End If;
+   Dbms_Output.Put_Line('Value of A is:'||A);
+End;
+
+[OUTPUT]
+
+A is Not less than 20
+Value of A is:100
