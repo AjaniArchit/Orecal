@@ -1,0 +1,26 @@
+Declare
+   A Number(3):=100;
+   B Number(3):=200;
+
+Begin
+   If (A=100)Then
+
+   If (B=200)Then 
+  
+   Dbms_Output.Put_Line('The Value Of A Is 100 & B Is 200');
+
+  End If;
+
+  End If;
+
+    Dbms_Output.Put_Line('Exact Of A Is:'||A);
+    Dbms_Output.Put_Line('Exact Of B Is:'||B);
+
+End;
+/
+     
+Output
+
+The Value Of A Is 100 & B Is 200
+Exact Of A Is:100
+Exact Of B Is:200
