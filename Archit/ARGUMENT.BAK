@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+int money (int currentmoney ,float fact=1.4)
+{
+	return currentmoney * fact;
+
+}
+int main ()
+{
+	int m=100000;
+	clrscr();
+	cout<<"with defualt value"<<money(m)<<endl;
+	cout <<"without defualt value"<<money(m,1.6)<<endl;
+	getch();
+	return 0;
+}
