@@ -1,0 +1,29 @@
+Goto Statent
+Declare
+ x number(3):=10;
+
+Begin
+ loop
+
+   x:=x+3;
+    dbms_output.put_line(x);
+
+ if x>20 then
+
+ goto Stop;
+
+end if;
+end loop;
+<<Stop>>
+  dbms_output.put_line('OUTSIDE LOOP');
+end;
+
+[OUTPUT]
+
+13
+16
+19
+22
+OUTSIDE LOOP
+
+Statement processed.
