@@ -1,0 +1,34 @@
+Declare 
+ A number:=0;
+ B number:=5;
+ C Number;
+Begin
+     Dbms_output.put_line(A);
+    Dbms_output.put_line(B);
+ For i In 1..10
+ Loop
+  c:=A+B;
+ Dbms_output.put_line(C);
+
+   A:=B;
+   B:=C;
+End Loop;
+ 
+End;
+
+[OUTPUT]
+
+0
+5
+5
+10
+15
+25
+40
+65
+105
+170
+275
+445
+
+Statement processed.

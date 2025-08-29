@@ -1,0 +1,23 @@
+Declare 
+  I Number(3):=1;
+  
+Begin
+  Dbms_Output.Put_line('THe Reverse Number Of 5678910'); 
+ 
+ For i In Reverse 5..10
+ Loop
+ 
+ Dbms_Output.put_line(i);
+End Loop;
+
+End;
+
+[OUTPUT]
+
+THe Reverse Number Of 5678910
+10
+9
+8
+7
+6
+5

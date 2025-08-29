@@ -1,0 +1,22 @@
+Declare 
+  A Number:=1;
+  B Number:=2;
+  C Number:=3;
+  Sm Number;
+  Av Number;
+
+Begin
+   
+  Sm:=A+B+C;
+  Av:=Sm/3;
+
+ Dbms_Output.put_line('SUM ='||Sm);
+ Dbms_Output.Put_line('Averge='||Av);
+End;
+
+[OUTPUT]
+
+SUM =6
+Averge=2
+
+Statement processed.

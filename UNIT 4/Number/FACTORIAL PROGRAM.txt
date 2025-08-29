@@ -1,0 +1,22 @@
+Declare
+
+   i number(4):=1;
+   n number(4):=5;
+   f number(4):=1;
+Begin
+  for i in 1..n
+  loop
+  f:=f*i;
+ 
+ Dbms_output.put_line('The Factorial of '||i||' is:'||f);
+
+End loop; 
+End
+
+[OUTPUT]
+
+The Factorial of 1 is:1
+The Factorial of 2 is:2
+The Factorial of 3 is:6
+The Factorial of 4 is:24
+The Factorial of 5 is:120

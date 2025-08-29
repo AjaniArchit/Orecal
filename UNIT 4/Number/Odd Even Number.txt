@@ -1,0 +1,31 @@
+Declare 
+
+Begin
+  
+ For i In 1..10
+  Loop
+ If Mod(i,2)=0 Then
+ Dbms_output.put_line(i||' Is an Even Number');
+
+Else
+
+ Dbms_output.put_line(i||' Is An Odd Number');
+
+End if;
+ End Loop;
+End;
+
+[OUTPUT]
+
+1 Is An Odd Number
+2 Is an Even Number
+3 Is An Odd Number
+4 Is an Even Number
+5 Is An Odd Number
+6 Is an Even Number
+7 Is An Odd Number
+8 Is an Even Number
+9 Is An Odd Number
+10 Is an Even Number
+
+Statement processed.
