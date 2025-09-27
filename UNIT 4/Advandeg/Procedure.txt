@@ -1,0 +1,25 @@
+-- Procedure Definition
+CREATE OR REPLACE PROCEDURE p2(a IN NUMBER)
+IS
+    ans NUMBER;
+BEGIN
+    ans := a * 2;
+    DBMS_OUTPUT.PUT_LINE('The Answer is: ' || ans);
+END;
+/
+
+-- Anonymous Block to Call the Procedure
+DECLARE
+    a NUMBER := 10;  -- Initialize the variable
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('The Real is: ' || a);
+    p2(a);  -- Use the correct procedure name (p2)
+END;
+/
+
+[OUTPUT]
+
+The Real is: 10
+The Answer is: 20
+
+Statement processed.

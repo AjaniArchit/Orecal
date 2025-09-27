@@ -1,0 +1,18 @@
+declare
+ no emp.id %type;
+ nm emp.name %type;
+ sal emp.salary %type;
+
+Begin
+
+ select id,name,salary into no,nm,sal from emp WHERE ROWNUM=1;
+ dbms_output.put_line(no);
+ 
+ dbms_output.put_line(nm);
+ dbms_output.put_line(sal);
+End;
+
+[OUTPUT]
+2
+jay
+7000

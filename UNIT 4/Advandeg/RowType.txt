@@ -1,0 +1,22 @@
+Declare
+ 
+ myr emp %rowtype;
+
+Begin
+ 
+ select id,name,salary into myr.id,myr.name,myr.salary from 
+
+ emp WHERE ROWNUM = 1;
+ dbms_output.put_line('Id is:'||myr.id);
+
+ dbms_output.put_line('Name is:'||myr.name);
+ dbms_output.put_line('Salary is:'||myr.salary);
+End;
+
+[OUTPUT]
+
+Id is:2
+Name is:jay
+Salary is:7000
+
+Statement processed.
